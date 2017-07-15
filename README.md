@@ -27,3 +27,6 @@ Things you may want to cover:
 1. rm -fR *
 2. gem install rails
 3. rails new .
+
+## Useful Commands
+- rails c (= rails console)

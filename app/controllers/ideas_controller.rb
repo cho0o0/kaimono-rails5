@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
 
   # GET /ideas
@@ -12,6 +13,7 @@ class IdeasController < ApplicationController
   def show
     @comments = @idea.comments.all
     @comment = @idea.comments.build
+    @comment.user_name = current_user.email
   end
 
   # GET /ideas/new

@@ -10,11 +10,15 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <%= form.hidden_field :user_name %>
+  
+  <% if false %>
   <div class="field">
     <%= form.label :user_name %>
     <%= form.text_field :user_name, id: :comment_user_name %>
   </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :body %>
